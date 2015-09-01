@@ -9,23 +9,21 @@ until tries == 5
 
   guess = gets.chomp
 
-    tries += 1
-  puts comp_guess
-  puts array.to_s
-  Integer(guess) rescue False
-    if array.include?(guess)
-      puts "You already tried that number..."
-    else array << guess
-    if guess.to_s > comp_guess.to_s && tries < 5
-      puts "Too high, try again."
+  tries += 1
+  puts "HINT: Computer thinks: #{comp_guess}"
+  puts "SO FAR: #{array.to_s}"
+#  if  array.include?(guess.to_i)
+#     puts "You already tried that number..."
+#     else array << guess.to_i
+  if guess.to_i > comp_guess && tries < 5
+    puts "Too high, try again."
 
-    elsif guess.to_s < comp_guess.to_s && tries < 5
-      puts "Too low, try again."
-    elsif guess.to_s == comp_guess.to_s
-      puts "JACKPOT!"
-      break
-    elsif
-      puts "Sorry, you lost."
-      end
-    end
+  elsif guess.to_i < comp_guess && tries < 5
+    puts "Too low, try again."
+  elsif guess.to_i == comp_guess
+    puts "JACKPOT!"
+    break
+  elsif
+    puts "Sorry, you lost."
   end
+end
