@@ -2,6 +2,11 @@ guess  = 0
 tries = 0
 comp_guess = rand(0..101)
 array = []
+def (repeat_check)
+  if  array.include?(guess.to_i)
+      puts "You already tried that number..."
+  else array << guess.to_i
+end
 
 puts "I'm thinking of a number between 1-100. Guess my number."
 
@@ -12,9 +17,7 @@ until tries == 5
   tries += 1
   puts "HINT: Computer thinks: #{comp_guess}"
   puts "SO FAR: #{array.to_s}"
-#  if  array.include?(guess.to_i)
-#     puts "You already tried that number..."
-#     else array << guess.to_i
+  repeat_check
   if guess.to_i > comp_guess && tries < 5
     puts "Too high, try again."
 
