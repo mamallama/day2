@@ -1,2 +1,1 @@
-# iyhw
-homework
+Basic Guessing Game in ruby.
